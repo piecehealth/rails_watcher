@@ -1,0 +1,3 @@
+module RailsWatcher
+  # Your code goes here...
+end
