@@ -1,0 +1,68 @@
+if ENV["RAILS_WATCHER"]
+  RailsWatcher.configuration do |config|
+
+    #
+    # ignored_files : files don't want to watch, default is `[]`
+    #
+    # config.ignored_files = ['app/articles_controller.rb']
+    #
+
+
+    #
+    # ignored_constants: Constants don't want to watch, default is `[]`
+    #
+    # config.ignored_constants = ['ArticlesController']
+    #
+
+
+    #
+    # ignored_paths: Paths don't want to watch, default is `[]`
+    #
+    # config.ignored_constants = ['vendor']
+    #
+
+    #
+    # ignored_methods: Methods don't want to watch, default is `{}`
+    #
+    # config.ignored_methods = {
+    #   "UsersController" => {
+    #     public: %i[method_1, method_2]
+    #   },
+    #   "WeirdMethods" => %i[some_method_in_any_file]
+    # }
+    #
+
+    #
+    # ignored_request_path: Request pathes don't want to watch, default is `[]`
+    #
+    # config.ignored_request_path = []
+    #
+
+
+    #
+    # request_duration_threshold: don't watch request fast then `request_duration_threshold`ms, default is `10` (ms)
+    #
+    # config.request_duration_threshold = 10 # ms
+    #
+
+    #
+    # rails_methods_i_want_to_watch: rails methods want to watch, default is `{}`
+    #                                key: rails component, value: array of methods
+    #
+    # config.rails_methods_i_want_to_watch = {
+    #   action_view: %i[
+    #     javascript_include_tag
+    #     stylesheet_link_tag
+    #     javascript_tag
+    #     content_for
+    #   ]
+    # }
+    #
+
+    #
+    # instance_handler: how to handle result, default is `"RailsWatcher::DefaultInstanceHandler"`, see `rails_watcher/default_instance_handler.rb` for details.
+    #
+    # config.instance_handler = "RailsWatcher::DefaultInstanceHandler"
+    #
+  end
+end

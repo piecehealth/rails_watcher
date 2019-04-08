@@ -16,6 +16,8 @@ module RailsWatcher
           const_name = RailsWatcher.configuration.file_constant_mapping[relative_path] ||
                             RailsWatcher.guess_const_name(relative_path)
 
+          return ret if RailsWatcher.configuration.ignored_constants.include? const_name
+
           if (Object.const_defined?(const_name) rescue return ret)
             ConstModifier.modify const_name, filename
           elsif Object.const_defined? const_name.upcase
