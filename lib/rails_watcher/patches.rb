@@ -58,7 +58,7 @@ module RailsWatcher
         call_stack = RailsWatcher::CallStack.get_instance
         if call_stack
           ret = nil
-          method_tag = "render_partial (#{options})"
+          method_tag = "render_partial (#{options.to_s[0, 70]})"
           call_stack.log_method_call method_tag do
             ret = super
           end
