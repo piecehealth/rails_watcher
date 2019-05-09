@@ -26,9 +26,9 @@ $ cd application_folder/tmp/rails_watcher
 $ rails_watcher_viewer
 ```
 View `localhost:4567`, you could see the list of your requests:
-[!list]()
+[!list](https://raw.githubusercontent.com/piecehealth/rails_watcher/master/list.png)
 You can navigate to details page, the `Expensive methods` table show the slow methods ordered by `net cost`:
-[!detail1]()
+[!detail1](https://raw.githubusercontent.com/piecehealth/rails_watcher/master/detail1.png)
 ### How to calculate `net cost`
 ```ruby
 @a = 1
@@ -47,7 +47,7 @@ sample_method() # will take 2 + 6 = 8 seconds
 ```
 The net cost of sample_method should be 1 + 2 = 3 seconds, the total cost of sample_method should be 4 + 8 = 12 seconds.
 
-[!detail2]()
+[!detail2](https://raw.githubusercontent.com/piecehealth/rails_watcher/master/detail2.png)
 The `Call Stack` section show the call stacks of your application.
 Please notice that, it only show the methods inside your application plus any methods you want to watch, which means the Ruby build-in methods and methods inside any gem will not be captured by default. It is great helpful for trouble shooting.
 
